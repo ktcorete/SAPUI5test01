@@ -1,0 +1,11 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+		<Schema xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm"
+			Namespace="sap.hana.democontent.epm.services">
+			<EntityType Name="BusinessPartnersType">
+				<Key><PropertyRef Name="PARTNERID"/></Key><Property Name="PARTNERID" Type="Edm.String" Nullable="false" MaxLength="10"/><Property Name="PARTNERROLE" Type="Edm.String" MaxLength="3"/><Property Name="EMAILADDRESS" Type="Edm.String" MaxLength="255"/><Property Name="PHONENUMBER" Type="Edm.String" MaxLength="30"/><Property Name="FAXNUMBER" Type="Edm.String" MaxLength="30"/><Property Name="WEBADDRESS" Type="Edm.String" MaxLength="1024"/><Property Name="ADDRESSES.ADDRESSID" Type="Edm.String" MaxLength="10"/><Property Name="COMPANYNAME" Type="Edm.String" MaxLength="80"/><Property Name="LEGALFORM" Type="Edm.String" MaxLength="10"/><Property Name="HISTORY.CREATEDBY.EMPLOYEEID" Type="Edm.String" MaxLength="10"/><Property Name="HISTORY.CREATEDAT" Type="Edm.DateTime"/><Property Name="HISTORY.CHANGEDBY.EMPLOYEEID" Type="Edm.String" MaxLength="10"/><Property Name="HISTORY.CHANGEDAT" Type="Edm.DateTime"/><Property Name="CURRENCY" Type="Edm.String" MaxLength="5"/></EntityType>
+			<EntityContainer Name="businessPartners" m:IsDefaultEntityContainer="true"><EntitySet Name="BusinessPartners" EntityType="sap.hana.democontent.epm.services.BusinessPartnersType"/></EntityContainer>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
